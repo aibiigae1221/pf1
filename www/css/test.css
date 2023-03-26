@@ -1,0 +1,10 @@
+.wrap{
+    width:800px;
+    margin:0 auto;
+    border:1px solid #d4cac0;
+    height:400px;
+}
+
+.box{
+    border:1px solid black;
+}

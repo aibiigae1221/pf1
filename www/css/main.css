@@ -1,0 +1,558 @@
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300
+}
+
+/* 상단 영역 */
+header{
+  
+  width: 1100px;
+  margin: 0 auto;
+  display:flex;
+  
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  position: absolute;
+  left: calc(50% - 550px);
+  z-index: 2;
+}
+
+header h1{
+  
+}
+
+header h1 a{
+  
+  width: 230px;
+  height: 25px;
+  display: block;
+  background-image: url('../img/hj_logo.jpg');
+  font-size: 0;
+}
+
+nav{
+  display:flex;
+
+}
+
+
+
+ul{
+  position: relative;
+}
+
+ul.gnb{
+  
+  margin-top: 20px;
+  border-top: 1px solid black;
+  display: flex;
+}
+
+ul.gnb li{
+  /* 클래스명이 gnb인 ul 아래에 위치한 li */
+  
+}
+
+ul.gnb li a{
+  
+  padding: 10px 30px;
+  display: block;
+}
+
+ul.gnb li a:hover{
+  color:red;
+  border-top: 1px solid blue;
+}
+
+.etcmenu{
+  position: absolute;
+  top:10px;
+  right:0px;  
+  display: flex;
+}
+
+.etcmenu li a{
+  padding:10px 30px;
+  font-size:13px;
+}
+
+.etcmenu li a:hover{
+  color:red;
+}
+
+.etcmenu li:first-child a::after{  /* 가상선택자 ::before, ::after /  :first-child 첫번째 자식 */ 
+  content: "▼";
+  font-weight:normal;
+  /*! color:#666; */
+  font-size:7px;
+  vertical-align: 2px; /* 글자 수직 정렬 */
+}
+
+li{
+  
+}
+
+/* 타이틀 영역 */
+div#title{
+  display:flex;
+  justify-content:center;
+  align-items:center; 
+  flex-direction:column;
+  height: 600px;
+  border: 1px solid red;
+  background-image: url('../img/title.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 100%;
+  background-attachment: fixed;
+  position:relative;
+}
+
+
+
+div#title:before{
+  content:"";
+  width:0;
+  padding:0;
+  border:300px solid rgba(238, 230, 211, 0.6);;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  position:absolute;
+  top:0;
+  left:0;
+  
+}
+
+div#title:after{
+  content:"";
+  width:0;
+  padding:0;
+  border:300px solid rgba(238, 230, 211, 0.6);
+  border-top-color:transparent;
+  border-left-color:transparent;
+  position:absolute;
+  right:0;
+}
+
+
+div#title h2{
+  font-size:30pt;
+  margin-bottom:10px;
+}
+
+div#title h2::after{
+  content:"";  
+  width: 2px;
+  height: 60px;
+  display: block;
+  background: #666;
+  margin: 0 auto;
+  margin-top: 14px;
+}
+
+
+div#title p{
+  line-height:1.5;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div#title a{
+  background-color:green;
+  color: white;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#title a::before{
+  content:"";
+  width: 0;
+  height: 0;
+  display: block;
+  border: 50px solid green;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: green;
+  border-left-color: transparent;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  border-bottom-width: 20px;
+}
+
+div#title a::after{
+  content:"";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: block;
+  border: 50px solid green;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-width: 20px;
+}
+
+div#title h2 span{
+  font-weight: 500;
+  
+}
+
+/*
+ // title클래스의 1단계 자식 요소들 중에 span을 지정한다.
+ // 하지만 html에서 매치되는 span이 없으므로 div#title > span이 가리키는 곳은 없게된다.
+div#title > span{
+  
+}
+*/
+
+
+/* 메인 영역 */
+main {
+  
+}
+main section#intro {
+  
+}
+main section#intro div {
+}
+main section#intro div h2 {
+  
+  display: none;
+}
+main section#intro div ul {
+  
+  justify-content: space-between;
+  display: flex;
+}
+main section#intro div ul li {
+ 
+  width: calc(100% / 4 - 60px / 4);
+  height: 260px;
+  display: flex;
+}
+main section#intro div ul li a {
+  
+  /*! flex-grow: 1; */
+  /*! justify-content: center; */
+  /*! align-items: center; */
+  /*! flex-direction: column; */
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section#intro div ul li:nth-child(1) a{
+  background: -webkit-gradient(radial, left top, left bottom, color-stop(0.11, #f0efee), color-stop(0.87, #9aadbb));
+	background: -moz-radial-gradient(circle, #f0efee 33%, #9aadbb 100%);
+	background: -webkit-radial-gradient(circle, #f0efee55 0%, #9aadbb 100%);
+	background: -o-radial-gradient(circle,  #f0efee 33%, #9aadbb 100%);
+	background: -ms-radial-gradient(circle,  #f0efee 33%, #9aadbb 100%);
+	background: redial-gradient(circle,  #f0efee 33%, #9aadbb 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0efee', endColorstr='#4b6d93', gradientType=0);
+}
+
+main section#intro div ul li:nth-child(2) a{
+  background: -webkit-gradient(radial, left top, left bottom, color-stop(0.11, #f0efee), color-stop(0.87, #bbcfd6));
+	background: -moz-radial-gradient(circle, #f0efee 33%, #bbcfd6 100%);
+	background: -webkit-radial-gradient(circle,  #f0efee 33%, #bbcfd6 100%);
+	background: -o-radial-gradient(circle,  #f0efee 33%, #bbcfd6 100%);
+	background: -ms-radial-gradient(circle,  #f0efee 33%, #bbcfd6 100%);
+	background: redial-gradient(circle,  #f0efee 33%, #bbcfd6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0efee', endColorstr='#bbcfd6', gradientType=0);
+}
+
+main section#intro div ul li:nth-child(3) a{
+  background: -webkit-gradient(radial, left top, left bottom, color-stop(0.11, #f0efee), color-stop(0.87, #dcdcdd));
+	background: -moz-radial-gradient(circle, #f0efee 33%, #dcdcdd 100%);
+	background: -webkit-radial-gradient(circle,  #f0efee 33%, #dcdcdd 100%);
+	background: -o-radial-gradient(circle,  #f0efee 33%, #dcdcdd 100%);
+	background: -ms-radial-gradient(circle,  #f0efee 33%, #dcdcdd 100%);
+	background: redial-gradient(circle,  #f0efee 33%, #dcdcdd 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0efee', endColorstr='#bab9b9', gradientType=0);
+}
+
+main section#intro div ul li:nth-child(4) a{
+  background: -webkit-gradient(radial, left top, left bottom, color-stop(0.11, #f0efee), color-stop(0.87, #d0cab4));
+	background: -moz-radial-gradient(circle, #f0efee 33%, #d0cab4 100%);
+	background: -webkit-radial-gradient(circle, #f0efee 33%, #d0cab4 100%);
+	background: -o-radial-gradient(circle,  #f0efee 33%, #d0cab4 100%);
+	background: -ms-radial-gradient(circle,  #f0efee 33%, #d0cab4 100%);
+	background: redial-gradient(circle,  #f0efee 33%, #d0cab4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0efee', endColorstr='#b8bb75', gradientType=0);
+}
+
+
+
+main section#intro div ul li:first-child a::before{
+  content:"";
+  width:100%;
+  
+  height: 90px;
+  background-image: url(../img/stream.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 20px;
+
+}
+
+
+main section#intro div ul li:nth-child(2) a::before{
+  content:"";
+  width:100%;
+  
+  height: 90px;
+  background-image: url(../img/cloud.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 20px;
+}
+
+main section#intro div ul li:nth-child(3) a::before{
+  content:"";
+  width:100%;
+  
+  height: 90px;
+  background-image: url(../img/settings.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 20px;
+}
+
+main section#intro div ul li:nth-child(4) a::before{
+  content:"";
+  width:100%;
+  
+  height: 90px;
+  background-image: url(../img/podcasts.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+main section#intro div ul li a h3 {
+  
+}
+
+main section#intro div ul li a h3:before{
+  content:"";
+  
+  width: 25px;
+  display: block;
+  border-top:5px solid #000;
+  margin: 5px auto;
+}
+
+main section#intro div ul li a p {
+  
+}
+
+
+/* 사회공헌 */
+
+
+#society {
+  
+}
+#society .wrap {
+  display:flex;
+  justify-content: space-between;
+  position:relative;
+  background-color: #e6efee;
+  padding: 20px;
+  box-sizing: border-box;
+ 
+  background-image: url(../img/main_roll_bg_back_removed.png);
+  background-repeat: no-repeat;
+  background-position: 35% 0%;
+}
+#society .wrap h2 {
+  
+}
+#society .wrap > p.p {
+  top:50px;
+  position: absolute;
+  color: #555;
+}
+#society .wrap article {
+  
+  width: 30%;
+}
+#society .wrap article a {
+
+}
+
+#society .wrap article a:after{
+  content:"+";
+  position:absolute;
+  right:22px;
+  top: 152px;
+}
+
+#society .wrap article a figure {
+  height: 130px;
+  overflow: hidden; 
+}
+
+#society .wrap article a img {
+
+  width: 100%;
+  position: relative;
+  top: -20px;
+}
+#society .wrap article a p {
+  
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90%;
+  line-height: 1.5;
+}
+
+
+/* 한진뉴스 */
+
+#news {
+ 
+}
+#news .wrap {
+ 
+}
+#news .wrap h2 {
+ 
+}
+#news .wrap ul {
+  display:flex;
+  flex-direction: column;
+  align-items:flex-end;
+  justify-content: flex-start;
+  position: relative;
+}
+#news .wrap ul li:first-child {
+ 
+}
+#news .wrap ul li:first-child a {
+ 
+}
+#news .wrap ul li:first-child a figure {
+ 
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#news .wrap ul li:first-child a figure img {
+ 
+}
+#news .wrap ul li:first-child a figure figcaption {
+ 
+}
+#news .wrap ul li:first-child a h3 {
+ 
+}
+#news .wrap ul li:first-child a p {
+ 
+}
+#news .wrap ul li {
+ 
+  width: 500px;
+}
+#news .wrap ul li a {
+ 
+}
+#news .wrap ul li a h3 {
+ 
+}
+#news .wrap ul li a date {
+ 
+}
+
+
+
+/*
+
+// 내가 해본 것
+
+#news {
+  
+}
+#news .wrap {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position:relative;
+}
+#news .wrap h2 {
+
+  width: 850%;
+}
+
+#news .wrap img {
+  position:absolute;
+  top: 32px;
+  width: 483px;
+  height: 225px;
+}
+
+#news .wrap article {
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 30px;
+}
+#news .wrap article h3 {
+
+  margin-bottom: 10px;
+}
+#news .wrap article > p {
+
+  height: 49px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #666666;
+}
+#news .wrap article ul {
+
+  position: absolute;
+  top: 130px;
+  left: 30px;
+  display: block;
+}
+#news .wrap article ul li {
+
+  color: #666666;
+}
+#news .wrap article ul li p {
+
+  text-overflow: ellipsis;
+  width: 84%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#news .wrap article ul li date {
+
+}
+*/
+
+ 
