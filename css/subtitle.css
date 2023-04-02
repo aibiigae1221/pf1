@@ -13,13 +13,13 @@
   align-items: center;
   position: relative;
 }
-#subtitle div.wrap h2.h1 {
+#subtitle div.wrap h1.h1 {
    color:white;
   
 }
 #subtitle div.wrap button {
   position: absolute;
-  right: 0;
+  right: 0px;
   border: 0 none;
   background-color: transparent;
   color: white;
@@ -29,15 +29,19 @@
   opacity: 0.8;
 }
 
+#subtitle div.wrap button:hover{
+  font-weight:bold;
+}
+
 #subtitle div.wrap button::before{
   content:"";
   border:3px solid #fff;
   display:block;
   position:absolute;
-  right:-15px;
+  right:-14px;
   width:30px;
   height:30px;
-  top: calc((100% - 30px) / 2);
+  top: calc((100% - 37px) / 2);
   border-radius: 50%;
 }
 

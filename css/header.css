@@ -24,7 +24,7 @@ body{
     display: block;
     font-size: 0;
   }
-  nav{
+  header nav{
     display: flex;
   }
   ul{

@@ -2,6 +2,11 @@
   padding-top:30px; 
   padding-bottom:30px; 
  }
+
+.padding100{
+  padding:100px 0;
+}
+
 .wrap{
   width: 1100px;
   margin: 0 auto;
@@ -37,5 +42,17 @@
 
 .flex{
   display:flex;
+  flex-wrap: wrap;
 }
 
+.blue{
+  color:#00a0c6;
+}
+
+img{
+  width:100%;
+}
+
+.grid{
+  display:grid;
+}
