@@ -1,0 +1,57 @@
+#groupnews {
+    
+}
+#groupnews section {
+
+}
+#groupnews section div {
+
+}
+#groupnews section div ul {
+
+  flex-direction: column;
+  padding-top: 30px;
+}
+#groupnews section div ul li {
+
+  margin-bottom: 10px;
+}
+#groupnews section div ul li a {
+
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 30px 113px 21px;
+  gap: 20px;
+}
+#groupnews section div ul li a figure {
+
+  grid-row: 1 / span 3;
+  grid-column: 1;
+}
+#groupnews section div ul li a figure img {
+
+  display: block;
+  height: 100%;
+}
+#groupnews section div ul li a p:nth-of-type(1){
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-height: 1.6;
+}
+#groupnews section div ul li a p.date {
+
+  color: #666;
+}
+#groupnews section div ul li a p.date span {
+
+  margin-right: 10px;
+}
+
+#groupnews section div ul li a p.date span:nth-child(n+2)::before{
+  content:"|"  ;
+  margin-right:10px; 
+}

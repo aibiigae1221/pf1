@@ -3,57 +3,6 @@
 
 }
 
-#greeting nav{
-  
-  margin-top:-50px;
-  position: relative;
-  background-color: #0c94bd88;
-}
-
-/* 브레드크럼브 */
-#greeting nav ol{
-
-}
-
-#greeting nav ol li{
-  color: #fff;
-  line-height: 50px;
-  text-align: center;
-}
-
-#greeting nav ol li:first-child{
-  background-color: #178098;
-}
-
-#greeting nav ol li:nth-child(n+2) {
-  width:120px;
-  border-right: 1px solid #41afc9;
-}
-
-#greeting nav ol li:last-child{
-  
-}
-
-#greeting nav ol li a{
-  
-  display: block;
-  color: #fff;
-  line-height: 50px;
-}
-
-#greeting nav ol li:first-child a{
-  
-  width:50px;
-  background-image: url(../img/home.svg);
-  background-size: 64%;
-  background-position: center;
-  font-size: 0;
-  background-repeat: no-repeat;
-}
-
-/* 브레드크럼브 */
-
-
 #greeting section {
 
 }

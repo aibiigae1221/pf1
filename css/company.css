@@ -1,59 +1,5 @@
 
 
-#company {
-
-}
-
-
-
-/* 브레드크럼브 */
-#company nav{
-  
-  margin-top:-50px;
-  position: relative;
-  background-color: #0c94bd88;
-}
-
-#company nav ol{
-
-}
-
-#company nav ol li{
-  color: #fff;
-  line-height: 50px;
-  text-align: center;
-}
-
-#company nav ol li:first-child{
-  background-color: #178098;
-}
-
-#company nav ol li:nth-child(n+2) {
-  width:120px;
-  border-right: 1px solid #41afc9;
-}
-
-#company nav ol li:last-child{
-  
-}
-
-#company nav ol li a{
-  
-  display: block;
-  color: #fff;
-  line-height: 50px;
-}
-
-#company nav ol li:first-child a{
-  
-  width:50px;
-  background-image: url(../img/home.svg);
-  background-size: 64%;
-  background-position: center;
-  font-size: 0;
-  background-repeat: no-repeat;
-}
-/* 브레드크럼브 */
 
 
 
