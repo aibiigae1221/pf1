@@ -53,6 +53,10 @@
   margin: 25px 0;
   grid-column: 1 / span 2;
 }
+#talentManagement section div.wrap > ul li h3{
+  line-height:1.3;
+}
+
 #talentManagement section div.wrap > ul li p{
   margin-bottom:15px;
   line-height: 1.5;
@@ -63,6 +67,7 @@
 }
 #talentManagement section div.wrap > ul li:nth-child(1) h3{
   grid-row: 2 / span 2;
+  
 }
 #talentManagement section div.wrap > ul li:nth-child(2){
   grid-template-columns: 0.4fr 1fr;
