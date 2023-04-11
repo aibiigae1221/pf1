@@ -13,13 +13,22 @@ main section#intro div h2 {
   display: none;
 }
 main section#intro div ul {
-  justify-content: space-between;
-  display: flex;
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px 300px;
 }
 main section#intro div ul li {
-width: calc(100% / 4 - 60px / 4);
-height: 260px;
+  /*! width: calc(100% / 4 - 60px / 4); */
+  /*! height: 260px; */
+
 }
+
+main section#intro div ul li:first-child{
+  
+  grid-row: 1 / span 3;
+}
+
 main section#intro div ul li a {
   display: block;
   width: 100%;
@@ -190,8 +199,9 @@ main section#intro div ul li a:hover::after{
   
 }
 #society .wrap {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  
+  
   background-color: #eee;
   padding: 20px;
   box-sizing: border-box;
@@ -199,18 +209,23 @@ main section#intro div ul li a:hover::after{
   background-image: url(../img/society-bg.png);
   background-repeat: no-repeat;
   background-position-x: 34%;
+  grid-template-columns: 300px 1fr 2fr;
+  grid-template-rows: 200px 200px 200px;
 }
 #society .wrap h2 {
   
+  grid-column: 1 / span 2;
+  border: 1px solid black;
 }
 #society .wrap>p.p {
-  position: absolute;
-  left: 20px;
-  top: 61px;
-  line-height: 1.4;
+  /*! position: absolute; */
+  /*! left: 20px; */
+  /*! top: 61px; */
+  /*! line-height: 1.4; */
 }
 #society .wrap article {
   
+  /*! grid-row: 1 / span 3; */
 }
 #society .wrap article a {
   border:1px solid transparent;
