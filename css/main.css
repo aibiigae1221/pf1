@@ -221,7 +221,6 @@ main section#intro div ul li a:hover::after{
 }
 
 #society .wrap article a:hover{
-  border:1px solid #ccc;
   background-color:#ddd;
 }
 
@@ -273,7 +272,7 @@ main section#intro div ul li a:hover::after{
 }
 #news .wrap ul li:first-child {
  
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 #news .wrap ul li:first-child a {
  

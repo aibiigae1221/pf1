@@ -2,7 +2,6 @@
 /* 타이틀영역 */
 div#title{
     height: 600px;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +15,7 @@ div#title{
   }
   div#title::before{
     content: "";
-    display: block;
+    display: none;
     width: 0;
     height: 0;
     border: 240px solid rgba(0,212,222,0.6);
@@ -28,9 +27,24 @@ div#title{
     left: 0;
     top: 0;
   }
+  div#title::after{
+    content: "";
+    display: none;
+    width: 0;
+    height: 0;
+    border: 240px solid rgba(0,212,222,0.6);
+    border-right-width: 690px;
+    border-left-width: 690px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+  }
   div#title h2{
     font-size: 30px;
-    margin-bottom: 11px;
+    margin-bottom: 50px;
     text-shadow: 2px 2px 6px #666;
   }
   div#title h2 span{
@@ -43,7 +57,7 @@ div#title{
     content: "";
     width: 2px;
     height: 60px;
-    display: block;
+    display: none;
     background-color: #666;
    margin: 0 auto;
     margin-top: 14px;
@@ -108,18 +122,4 @@ div#title{
   div#title a:hover::after{
     border-top-color: orange;
   }
-  div#title::after{
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border: 240px solid rgba(0,212,222,0.6);
-    border-right-width: 690px;
-    border-left-width: 690px;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    opacity: 0.3;
-  }
+ 
