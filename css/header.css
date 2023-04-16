@@ -4,18 +4,24 @@ body{
   }
   /* 상단영역 */
   header{
-    width: 1100px;
      /* 수평중앙정렬 */
+    margin:0 auto;
     display: flex;
     justify-content: space-between;
     height: 100px;
     align-items: center;
     position: absolute;
-    left: calc(50% - 550px);
+    left: 0;
     z-index: 1;
+    transition:all 0.5s;
+    width: 100%;
+    padding: 0 calc((100% - 1100px) / 2);
+    box-sizing: border-box;
   }
   header h1{
    
+  position: relative;
+  z-index: 1;
   }
   header h1 a{
     background-image: url(../img/hj_logo.jpg);
@@ -34,24 +40,101 @@ body{
     border-top: 1px solid #8080807a;
     display: flex;
   }
-  ul.gnb li{ /*클래스명이gnb인ul 아래에 위치한(있는) li*/
+  ul.gnb > li{ /*클래스명이gnb인ul 아래에 위치한(있는) li*/
             /* 경기도 인천시 부평구 */    
     margin-top: -1px;
   }
-  ul.gnb li a{
+  ul.gnb > li h2{
+
+  z-index: 1;
+  position: relative;
+  }
+  ul.gnb > li:hover ul.submenu{
+    display: flex;
+    opacity: 1;
+  }
+  ul.gnb > li h2 a{
     padding: 10px 30px;
     display: block;
     border-top: 2px solid transparent;
     transition: border 1s;
   }
-  ul.gnb li a:hover{
+  ul.gnb > li h2 a:hover{
     color:red;
     border-top: 2px solid blue;
+  }
+
+  
+  /*서브메뉴*/
+  ul.submenu{
+    position: absolute;
+    left: 0;
+    column-gap: 45px;
+    letter-spacing: 2px;
+    line-height: 2;
+    height: 400px;
+    width: 100%;
+    padding: 0 calc((100% - 1100px) / 2);
+    box-sizing: border-box;
+    background: white;
+    justify-content: center;
+    display: none;
+    top: 0;
+    padding-top: 80px;
+    transition: all 0.5s;
+    opacity: 0;
+    box-shadow: 2px 2px 6px #999;
+  }
+  ul.gnb > li:nth-child(n+2) ul.submenu{
+    padding-left: 548px;
+  }
+
+  .submenu{
+    display:flex !important;
+    animation-name: submenuup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+      
+  }
+
+  @keyframes submenuup{
+    0%{
+      transform:translateY(-30px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+
+  ul.submenu > li{
+    
+  }
+  ul.submenu > li h3{
+    
+  }
+  ul.submenu > li h3 a{
+    color: #00a0c6;
+    font-size: 17px;
+  }
+  
+  ul.submenu > li ul.sublist{  
+    position: absolute;
+  }
+  ul.submenu > li ul.sublist li{
+    
+  }
+  ul.submenu > li ul.sublist li a{
+    
+  }
+  ul.submenu > li ul.sublist li a:hover{
+    text-decoration: underline;
+    text-decoration-color: #999;
+    color: #999;
   }
   ul.etcmenu{
     position: absolute;
     top: 8px;
-    right: 0px;
+    right: calc((100% - 1100px) / 2);
     display:flex;
   }
   ul.etcmenu li{

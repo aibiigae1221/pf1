@@ -15,7 +15,6 @@
   line-height: 1.2;
   margin-bottom: 30px;
   font-family: -apple-system, BlinkMacSystemFont, "Pretendard Std Variable", "Pretendard Std", Pretendard, Roboto, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size: 25px;
 }
 
 
@@ -84,7 +83,7 @@
 }
 
 #company section div .article ul li figure img{
-  height: 100%;
+
 }
 
 #company section div .article ul li figure figcaption{
