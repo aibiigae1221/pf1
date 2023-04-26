@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
+<html lang="ko"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)한진칼-인사말</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    
-    <!-- 구글 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+    <title>PF1-(주)한진칼-사업은 예술이다</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="css/css2.css" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
-    
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/subtitle.css">
-    <link rel="stylesheet" href="css/TalentManagement.css" />
-
-    <link rel="stylesheet" href="css/response.css" />
-
-    <!-- 프리텐드 cdn -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std.css" />
-
-    <!-- 폰트 어썸 cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <link rel="stylesheet" href="css/art.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" as="style" crossorigin="" href="css/pretendard-std.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/response.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/submenu.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //$(".art .timeline li").width("200px");
+            $(".art .timeline").wrap("<div class='wtimeline'></div>");
+            $(".wtimeline").wrap("<div class='wwtimeline'></div>");
+
+            // 타임라인 컨트롤 버튼 배치
+            $(".wtimeline").append('<span class="control"><button class="prev">&lt;</button><button class="next">&gt;</button></span>');
+
+        });
+        
+
+    </script>
 </head>
 <body>
-    <!-- 상단 영역 마크업 주석 -->
 
+    
+
+    <!-- 상단영역 마크업주석  -->
     <header>
-        <h1><a href="main.html">HANJIN KAL</a></h1>
+        <h1><a href="./main.html">HANJIN KAL</a></h1>
         <nav>
             <ul class="gnb">
                 <li>
                     <h2><a href="#">한진그룹</a></h2>
                     <ul class="submenu flex">
                         <li>
-                            <h3 class="h5 blue"><a href="greeting.html" class="block">인사말씀</a></h3>
+                            <h3 class="h5 blue"><a href="./greeting.html" class="block">인사말씀</a></h3>
                             <ul class="sublist">
-                                <li><a href="greeting.html" class="block">인사말씀</a></li>
+                                <li><a href="./greeting.html" class="block">인사말씀</a></li>
                                 <li class="opacity30"><a href="" class="block">경영철학 </a></li>
                             </ul>
                         </li>
@@ -52,12 +59,12 @@
                                 <li><a href="" class="block">한진70년</a></li>
                             </ul>
                         </li>
-                        <li class="opacity30">
-                            <h3 class="h5 blue"><a href="" class="block">창업회장관</a></h3>
+                        <li>
+                            <h3 class="h5 blue"><a href="./president.html" class="block">창업회장관</a></h3>
                             <ul class="sublist">
-                                <li><a href="" class="block">정석 조중훈</a></li>
-                                <li><a href="" class="block">사업은 예술이다</a></li>
-                                <li><a href="" class="block">전기 다운로드</a></li>
+                                <li><a href="./president.html" class="block">정석 조중훈</a></li>
+                                <li class="opacity30"><a href="" class="block">사업은 예술이다</a></li>
+                                <li class="opacity30"><a href="" class="block">전기 다운로드</a></li>
                             </ul>
                         </li>
                         <li class="opacity30">
@@ -85,9 +92,9 @@
                     <h2><a href="#">한진칼</a></h2>
                     <ul class="submenu flex">
                         <li>
-                            <h3 class="h5 blue"><a href="company.html" class="block">회사 소개</a></h3>
+                            <h3 class="h5 blue"><a href="./company.html" class="block">회사 소개</a></h3>
                             <ul class="sublist">
-                                <li><a href="company.html" class="block">기업개요</a></li>
+                                <li><a href="./company.html" class="block">기업개요</a></li>
                                 <li class="opacity30"><a href="" class="block">연혁</a></li>
                                 <li class="opacity30"><a href="" class="block">CI</a></li>
                                 <li class="opacity30"><a href="" class="block">찾아오시는 길</a></li>
@@ -107,24 +114,24 @@
                     <h2><a href="#">ESG경영</a></h2>
                     <ul class="submenu flex">
                         <li>
-                            <h3 class="h5 blue"><a href="#" class="block">지속가능경영</a></h3>
+                            <h3 class="h5 blue"><a href="./governance.html" class="block">지속가능경영</a></h3>
                             <ul class="sublist">
                                 <li class="opacity30"><a href="" class="block">윤리경영</a></li>
-                                <li><a href="TalentManagement.html" class="block">인재경영</a></li>
+                                <li><a href="./TalentManagement.html" class="block">인재경영</a></li>
                                 <li class="opacity30"><a href="" class="block">안전경영</a></li>
                             </ul>
                         </li>
                         <li>
-                            <h3 class="h5 blue"><a href="governance.html" class="block">기업지배구조</a></h3>
+                            <h3 class="h5 blue"><a href="" class="block">기업지배구조</a></h3>
                             <ul class="sublist">
-                                <li><a href="governance.html" class="block">기업지배구조헌장</a></li>
+                                <li><a href="./governance.html" class="block">기업지배구조헌장</a></li>
                                 <li class="opacity30"><a href="" class="block">이사회</a></li>
                                 <li class="opacity30"><a href="" class="block">위원회</a></li>
                                 <li class="opacity30"><a href="" class="block">정관</a></li>
                                 <li class="opacity30"><a href="" class="block">기타 관련 정보</a></li>
                             </ul>
                         </li>
-                        <li  class="opacity30">
+                        <li class="opacity30">
                             <h3 class="h5 blue"><a href="" class="block">사회공헌</a></h3>
                             <ul class="sublist">
                                 <li><a href="" class="block">나눔경영</a></li>
@@ -134,7 +141,7 @@
                                 <li><a href="" class="block">활동소식</a></li>
                             </ul>
                         </li>
-                        <li  class="opacity30">
+                        <li class="opacity30">
                             <h3 class="h5 blue"><a href="" class="block">환경경영</a></h3>
                             <ul class="sublist">
                                 <li><a href="" class="block">기후변화 대응</a></li>
@@ -148,7 +155,7 @@
                     <h2><a href="#">한진인</a></h2>
                     <ul class="submenu flex">
                         <li>
-                            <h3 class="h5 blue"><a href="people.html" class="block">한진의 인재상</a></h3>
+                            <h3 class="h5 blue"><a href="./people.html" class="block">한진의 인재상</a></h3>
                         </li>
                         <li class="opacity30">
                             <h3 class="h5 blue"><a href="" class="block">인재육성</a></h3>
@@ -169,7 +176,7 @@
                     <h2><a href="#">홍보센타</a></h2>
                     <ul class="submenu flex">
                         <li>
-                            <h3 class="h5 blue"><a href="groupnews.html" class="block">그룹사소식</a></h3>
+                            <h3 class="h5 blue"><a href="./groupnews.html" class="block">그룹사소식</a></h3>
                         </li>
                         <li class="opacity30">
                             <h3 class="h5 blue"><a href="" class="block">광고모음</a></h3>
@@ -188,127 +195,60 @@
                 </li>
             </ul>
             <ul class="etcmenu">
-                <li><a href="">전체메뉴</a></li>
-                <li><a href="">ENGLISH</a></li>
-            </ul>    
-            <button class="hide ham">전체메뉴보기</button>
+                <li><a href="#">전체메뉴</a></li>
+                <li><a href="#">ENGLISH</a></li>
+                <i class="fa-solid fa-magnifying-glass" style="color: #3b7ae8;"></i>
+            </ul>
         </nav>
     </header>
-
-
-   
-    <div id="title">
-        
-        <div id="subtitle">
-            <div class="wrap flex">
-                <h1 class="h1 bold">인재경영</h1>
-                <button class="h3">윤리경영</button>
-                <i class="fa-solid fa-magnifying-glass" style="color: #1e3050;"></i>
-               
-            </div>
+    <!-- 서브타이틀 -->
+    <div id="subtitle">
+        <div class="wrap flex">
+            <h2 class="h1 bold">정석 조중훈</h2>
+            <button class="h3">사업은 예술이다</button>
         </div>
-
-
-    </div> 
-
-    <!-- 메인 영역 -->
-  
-    <main id="talentManagement">
-        
+    </div>
+    <!-- 메인영역 -->
+    <main id="president">
         <nav class="breadcrumb">
             <ol class="wrap flex">
-                <li><a href="main.html">HOME</a></li>
-                <li><a href="governance.html">ESG경영</a></li>
-                <li><a href="#">지속가능경영</a></li>
-                <li>인재경영</li>
+                <li><a href="./main.html">Home </a></li>
+                <li><a href="./greeting.html"> 한진그룹</a></li>
+                <li><a href="./president.html"> 창업회장관</a></li>
+                <li>정석 조중훈</li>
             </ol>
         </nav>
-
-        <section>
-            <div class="wrap padding30">
-
-
-                <!-- 인재 중시경영 -->
-                <h2 class="blue h2">인재 중시 경영</h2>
-                <p class="p ccc">「기업은 곧 인간」 이라는 창업이념 아래 한진그룹 전 임직원이 각자의 역량을 충분히 발휘하고 회사와 함께 성장할 수 있도록 지원하고 있습니다.</p>
-
-                <div class="grid">
-                    <figure>
-                        <img src="img/talentManagement.jpg" alt="img/talentManagement.jpg" />
-                    </figure>
-                    
-                    <h3 class="h3">임직원에 대한 약속</h3>
-                    <ul>
-                        <li class="ccc p">
-                            임직원을 존중하고 신뢰하며, 회사의 가장 소중한 자산으로 여기겠습니다.
-                        </li>
-                        <li class="ccc p">
-                            임직원의 성과와 역량에 기반을 둔 공정한 평가보상 시스템을 통해 차별 없는 투명<span class="block"></span>한 인사관리제도를 운영하겠습니다. 
-                        </li>
-                        <li class="ccc p">
-                            임직원의 자기계발과 자아실현을 위한 다양한 활동을 장려하고 지원하며, 삶의 질 <span class="block"></span>향상을 위한 최선의 복리후생제도를 운영하겠습니다. 
-                        </li>
-                        <li class="ccc p">안전하고 건강한 직업환경과 쾌적한 근무환경을 제공하겠습니다.</li>
-                        <li class="ccc p">
-                            원활하고 효율적인 의사소통체계를 구축하여 임직원에게 필요한 정보를
-                            <span class="block"></span>
-                             적시에 제공하겠습니다. 
-                        </li>
-                    </ul>
-                </div>
-
-
-                <!-- 인권 중시경영 -->
-                <h2 class="h2 blue">인권 중시 경영</h2>
-                <ul>
-                    <li class="grid">
-                        <h3 class="h3">
-                            인권과 <span class="block"></span>
-                            다양성 존중
-                        </h3>
-                        <p class="ccc p">
-                            한진그룹은 근로기준법은 물론 전 세계 사업장에서 해당 국가의 법과 제도를 준수하고 있으며, 국제노동기구(ILO)에서 정한 규정에 따라 모든 형태의 강제노동, 아동노동 및 임금착취를 철저히 금하고 있습니다.
-                            아울러 임직원 채용, 배치, 평가, 보상 등 인사관리 전반에 있어 성별, 연령, 인종, 종교, 장애, 출신지역, 정치적 견해 등을 이유로 차별하지 않습니다.
-                        </p>
-                        <p class="ccc p">
-                            앞으로도 한진그룹은 사업을 영위하는 모든 지역에서 근로자의 인권을 존중하고, 최적의 근무 환경을 조성하기 위해 최선을 다할 것입니다.
-                        </p>
-                    </li>
-                    <li class="grid">
-                        <h3 class="h3">
-                            인권 향상을 <span class="block"></span>
-                            위한 교육 지원
-                        </h3>
-                        <p class="ccc p">
-                            한진그룹은 직원 개인이 사람으로서 누려야할 기본적인 자유와 권리를 보장함과 동시에 인권 관련 임직원 의식 제고를 위해 전 직원을 대상으로 50여 개의 관련 교육을 제공하고 있습니다.
-                            또한 장애인 차별 금지, 성희롱 예방 교육 등을 통해 직원 인권 향상에 힘쓰고 있으며, 건강한 몸과 마음을 유지할 수 있도록 관련 교육을 정기적으로 운영하고 있습니다.  
-                        </p>
-                        
-                    </li>
-                </ul>
-
-
+        <section class="art padding100">
+            <div class="wrap">
+                <ul class="nav flex h4 bold">
+                    <li><a href="">정석 조중훈</a></li>
+                    <li><a href="" class="blue">사업은 예술이다</a></li>
+                    <li><a href="">전기 다운로드</a></li>
+                </ul> 
+                <h2 class="hide">사업은 예술이다</h2>
+                <ul class="flex timeline">
+                    <li><a href="">파도마저 삼킨 오디세이</a></li>
+                    <li><a href="">퀴논의 전설</a></li>
+                    <li><a href="">하늘길을 열다</a></li>
+                    <li><a href="">대한의 날개에서 세계의 날개</a></li>
+                    <li><a href="">해운왕 꿈을 이루다</a></li>
+                    <li><a href="">수송외길을 위한 변주곡</a></li>
+                    <li><a href="">열정의 민간외교가</a></li>
+                    <li><a href="">인재의 숲을 가꾼 정원사</a></li>
+                    <li><a href="">인생과 사업의 예술가</a></li>
+                </ul>     
             </div>
-            
         </section>
-
     </main>
-
-  
-    
-    <!-- 하단 영역 -->
+    <!-- 하단영역 -->
     <footer class="padding30">
-        
         <div class="wrap flex">
             <ul>
                 <li><a href="">법적고지</a></li>
                 <li><a href="">이메일주소무단수집거부</a></li>
                 <li><a href="">사이트맵</a></li>
             </ul>
-            <address class="ccc">
-                서울특별시 중구 서소문로 117
-                <span class="block"></span>
-                Tel. 02-726-6166 </address>
+            <address>서울특별시 중구 서소문로 117 <span class="block"></span> Tel. 02-726-6166 </address>
             <select name="" id="">
                 <option value="">계열사 바로가기</option>
                 <option value="" selected="selected">한진칼</option>
@@ -316,17 +256,7 @@
             </select>
             <p class="p ccc">COPYRIGHT HANJIN KAL. All Rights Reserved.</p>
         </div>
-        
-        
-        
-        
     </footer>
+    
 
-
-
-
-
-
-
-</body>
-</html>
+</body></html>
