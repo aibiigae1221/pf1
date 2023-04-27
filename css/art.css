@@ -1,0 +1,293 @@
+.art h2{
+
+}
+.art .wwtimeline{
+  border: 1px solid #ccc;
+  position: relative;
+}
+.art .wtimeline{
+  position:relative;
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 1;
+}
+.art .wtimeline::before{
+  content: "";
+  width: calc(100% - 40px);
+  border-top:2px solid #ccc;
+  position: absolute;
+  top:30px;
+  left: 20px;
+}
+.art .timeline{
+  flex-wrap: nowrap;
+  width: fit-content;
+  position: relative;
+  transition: all 1s;
+}
+
+.art .timeline li{
+  width: calc(1000px / 5);
+}
+.art .timeline li a{
+  white-space: nowrap;
+  line-height: 3;
+  margin: 20px 0;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+}
+.art .timeline li a::before{
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: block;
+  line-height: 1;
+  transform: translateY(5px);
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.art .timeline li a::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: block;
+  line-height: 1;
+  transform: translateY(5px);
+  top:-4px;
+  position: absolute;
+  
+  transition:all 0.5s;
+}
+
+.currentT::before{
+  background-color:#00a0c6 !important;
+}
+.currentT::after{
+   background-color:#ccc !important;
+}
+
+.art .control{
+  
+  position: absolute;
+  width: 98%;
+  height: 100%;
+  left: 1%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-8px);
+}
+.art .control button{
+  
+  background-color: transparent;
+  border: none;
+  font-size: 46px;
+  transform: scaleY(1.8);
+  color: #999;
+  cursor: pointer;
+}
+.art .control button.prev{
+  
+}
+.art control button.next{
+  
+}
+
+/* 타임라인 썸네일 목록 */
+.timelinegallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 30px;
+  gap: 10px;
+  position: relative;
+}
+
+.timelinegallery .popup{
+  position: absolute;
+  left: calc(50% - 800px / 2);
+  background-color: #fff;
+  top: calc(50% );
+}
+
+.timelinegallery .popup figure{
+  
+  width: 800px;
+  height: 600px;
+}
+
+.timelinegallery .popup figure img{
+  
+}
+
+.timelinegallery .popup figure figcaption{
+  
+  padding: 30px 0;
+}
+
+.timelinegallery .intro {
+
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  position: relative;
+}
+
+.timelinegallery .intro h3 {
+ 
+  line-height: 1.3;
+}
+.timelinegallery .intro h3::after{
+  content:"";
+  display: block;
+  border-bottom: 1px solid #666;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  width: 10%;
+}
+.timelinegallery .intro p {
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 1.5;
+}
+
+.timelinegallery .intro .view{
+  background-color: #169abd;
+  color: #fff;
+  position: absolute;
+  right: 0px;
+  font-size: 25px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 0 none;
+}
+
+.timelinegallery > figure {
+  
+}
+.timelinegallery > figure img {
+  
+  cursor: pointer;
+}
+.timelinegallery > figure figcaption {
+  
+  display: none;
+}
+
+.timelinegallery > figure .tPopup{
+  
+}
+
+.timelinegallery .tPopup{
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: white;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.timelinegallery .tPopup .intro{
+  height: 100%;
+  padding: 10px;
+}
+
+.timelinegallery .tPopup .intro h3{
+  font-size: 25px;
+}
+
+.timelinegallery .tPopup .intro p{
+  height: 100%;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: initial;
+  display: block;
+}
+
+.timelinegallery .tPopup .intro .popup-control{
+  display: flex;
+  column-gap: 5px;
+  justify-content: flex-end;
+}
+
+.timelinegallery .tPopup .intro .popup-control button{
+  padding: 10px 20px;
+  border: 0;
+  cursor: pointer;
+}
+
+.timelinegallery .tPopup .intro .popup-control .close{
+  background-color: #0e93b6;
+  color: #fff;
+  order: 2;
+}
+
+.timelinegallery .tPopup .intro .popup-control .more{
+  background-color: #fff;
+  border: 1px solid #3d5fb5;
+  color: #3d5fb5;
+  order: 1;
+}
+
+#wart .readpopup{
+
+  position: absolute;
+  border: 1px solid black;
+  width: 800px;
+  height: auto;
+  left: calc(50% - 800px / 2);
+  top: 500px;
+  background: #fff;
+  padding: 30px;
+  z-index: 3;
+}
+
+#wart .readpopup h3{
+  
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+#wart .readpopup iframe{
+  
+  display: block;
+  height: 600px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+#wart .readpopup .readpopup-control{
+  text-align: right;
+  margin-top: 20px;
+  display: block;
+}
+
+#wart .readpopup .readpopup-control .close{
+  background-color: #0e93b6;
+  color: #fff;
+  padding: 10px 20px;
+  border: 0 none;
+  cursor: pointer;
+}
+
+
+

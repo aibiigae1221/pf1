@@ -36,20 +36,19 @@
 }
 
 #governance section div ul{
-  background-color: #eee;
-  border: 1px solid #bbb;
+ 
 }
 #governance section div ul li{
   width: calc(100% / 6);
   box-sizing: border-box;
 }
 #governance section div ul li:not(:first-child){
-  border-left: 1px solid #bbb;
+  //border-left: 1px solid #bbb;
 }
 #governance section div ul li a{
-  display: block;
+/*   display: block;
   text-align: center;
-  line-height: 3;
+  line-height: 3; */
 }
 #governance section div ul li:first-child a{
 }
@@ -67,13 +66,6 @@
 }
 #governance section div ul li p{
     
-}
-.current{
-  background-color: white;
-  border: 1px solid blue;
-  border-bottom-color: white;
-  border-top-width: 2px;
-  transform: scale(1.02);
 }
 
 

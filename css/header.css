@@ -1,7 +1,4 @@
-body{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight:300;
-  }
+
   /* 상단영역 */
   header{
     width: 100%;
@@ -96,6 +93,26 @@ body{
       transform: translateY(0);
     }
   }
+  .submenuup{
+    display:flex !important;
+    animation-name:submenuup;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }  
+  @keyframes submenuup{
+    0%{
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    99%{
+      transform: translateY(0) scale(1);
+    }
+    100%{
+      transform: translateY(0) scale(0);
+      opacity: 0;
+    }
+  }
+
   .submenushow{
     display: flex !important;
   }
