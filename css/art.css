@@ -115,6 +115,39 @@
   position: relative;
 }
 
+/* 썸네일 팝업 */
+.timelinegallery .gallery-popup{
+  
+  background-color: #fff;
+  position: absolute;
+  width: 600px;
+  border: 1px solid black;
+  left: calc(50% - 600px / 2);
+}
+.timelinegallery .gallery-popup figure{
+  
+}
+.timelinegallery .gallery-popup figure img{
+  
+}
+.timelinegallery .gallery-popup figure figcaption{
+  
+  padding: 20px;
+  padding-bottom: 40px;
+}
+.timelinegallery .gallery-popup .close{
+  
+  position: absolute;
+  background-color: #fff;
+  padding: 16px;
+  border: 0 none;
+  cursor: pointer;
+  font-size: 20px;
+  right: -22px;
+  top: -33px;
+}
+/* 썸네일 팝업 */
+
 .timelinegallery .popup{
   position: absolute;
   left: calc(50% - 800px / 2);
