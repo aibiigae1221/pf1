@@ -206,6 +206,24 @@
                 
             });
 
+            // 썸네일 클릭시 이미지 팝업 열기
+            $(".timelinegallery > figure img").click(function(){
+
+                $(".timelinegallery").append("<div class='gallery-popup'></div>")
+                const popup = $(".gallery-popup");
+                
+                $(this).parent().clone().appendTo(popup);
+                popup.append("<button class='close'>x</button>");
+                
+                popup.hide().fadeIn(500);
+                
+                popup.find(".close").click(function(){
+                    popup.fadeOut(500, function(){
+                        $(this).remove();
+                    });
+                });
+            });
+
             
 
         });// document ready
