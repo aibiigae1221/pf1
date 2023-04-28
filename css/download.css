@@ -1,0 +1,57 @@
+#download-container {
+  
+}
+#download-container section {
+  
+}
+#download-container section .wrap {
+  
+}
+#download-container section .wrap ul.download-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 30px;
+  width: 100%;
+}
+#download-container section .wrap ul.download-list li {
+  border-top: 3px solid #1297bb;
+  text-align: center;
+}
+#download-container section .wrap ul.download-list li h3 {
+  
+  height: 50px;
+  padding-top: 20px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  line-height: 1.2;
+  padding-bottom: 9px;
+}
+#download-container section .wrap ul.download-list li figure {
+  
+  height: 250px;
+}
+#download-container section .wrap ul.download-list li figure img {
+  
+  height: 100%;
+}
+#download-container section .wrap ul.download-list li button {
+  
+  margin-top: 10px;
+  background-color: #fff;
+  color: #1297bb;
+  border: 2px solid #1297bb;
+  padding: 0 10px 15px 19px;
+  cursor: pointer;
+}
+#download-container section .wrap ul.download-list li button .download-icon{
+  
+  background-image: url(../img/download.JPG);
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 27px;
+  display: inline-block;
+  transform: translateY(10px);
+}
