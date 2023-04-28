@@ -76,9 +76,16 @@
                     
                 }
 
-                $(".art .timeline" + n).show();
-                $(".art .timelinegallery").not(".timeline" + n).hide();
+                // 선택한 타임라인만 보이게하고 나머지 타임라인은 감춘다.
+                $(".art .timeline" + n).removeClass("hide");
+                $(".art .timelinegallery").not(".timeline" + n).addClass("hide");
             });
+
+            // 첫번째 타임라인만 보이게 하기
+            //$(".timelineGallery:not(:nth-of-type(1))").hide();
+//            $(".timelineGallery").not(":nth-of-type()").hide();
+            $(".timelineGallery:nth-of-type(2)").hide();
+            //$(".timelinegallery").not(".timelinegallery:nth-of-type(1)").hide();
 
             // 클릭한 리스트에 클래스 블루 지정
             $(".art .timeline li:first-child a").addClass("currentT");
@@ -92,8 +99,8 @@
                 console.log("직접클릭 n: " + n);
                 
                 // 클릭한 리스트에 해당하는 컨텐츠를 보이게 처리
-                $(".art .timeline" + n).show();
-                $(".art .timelinegallery").not(".timeline" + n).hide();
+                $(".art .timeline" + n).removeClass("hide");
+                $(".art .timelinegallery").not(".timeline" + n).addClass("hide");
                 return false;
             });
 
@@ -101,23 +108,26 @@
             $(".timelinegallery .intro").append("<button class='view'>+</button>");
 
             $(".timelinegallery .intro .view").click(function(){
-                $(".timelinegallery").append('<div class="tPopup"></div>');
-                $(".intro").clone().appendTo(".tPopup");
-                $(".timelinegallery .tPopup .view").attr("class", "close");
-                $(".timelinegallery .tPopup .close").text("닫기");
-                $(".timelinegallery .tPopup .intro").append("<button class='more'>전문읽기</button>");
-                $(".timelinegallery .tPopup button").wrapAll("<span class='popup-control'></span>");
+                
+                const timelineGallery = $(this).parents(".timelinegallery");
+                timelineGallery.append('<div class="tPopup"></div>');
+                const tPopup = timelineGallery.find(".tPopup");
+                timelineGallery.find(".intro").clone().appendTo(tPopup);
 
-                $(".tPopup").hide().fadeIn(500);
+                tPopup.find(".view").attr("class", "close");
+                tPopup.find(".close").text("닫기");
+                tPopup.find(".intro").append("<button class='more'>전문읽기</button>");
+                tPopup.find("button").wrapAll("<span class='popup-control'></span>");
+                tPopup.hide().fadeIn();
 
-                $(".timelinegallery .tPopup .close").click(function(){
-                    $(".tPopup").fadeOut(500, function(){
-                        $(this).remove();
+                tPopup.find(".close").click(function(){
+                    tPopup.fadeOut(500, function(){
+                        tPopup.remove();
                     });
                 });
 
                 //  전문보기버튼클릭하여 창열기
-                $(".tPopup .more").click(function(){
+                tPopup.find(".more").click(function(){
                     $("#wart").append('<div class="readpopup"><h3 class="h3">소년은 바다를 꿈꾸었고 바다는 소년의 꿈을 품었다</h3><iframe src="" frameborder="0"></iframe><button type="button" class="close">닫기</button></div>');
                     
                     $(".readpopup iframe").attr("src", "art-1.html");
@@ -408,7 +418,7 @@
                     <li><a href="">인재의 숲을 가꾼 정원사</a></li>
                     <li><a href="">인생과 사업의 예술가</a></li>
                 </ul>
-                <div class="timeline1 timelinegallery flex">
+                <div class="timeline1 timelinegallery">
                  
                     <div class="intro">
                         <h3 class="h5 bold">
@@ -496,8 +506,8 @@
                         <figcaption>1969년 서울-대전 한진고속 개통식</figcaption>
                     </figure>
                 </div>  
-
-                <div class="hide timeline2 timelinegallery flex">
+ 
+                <div class="hide timeline2 timelinegallery">
                  
                     <div class="intro">
                         <h3 class="h5 bold">
@@ -538,49 +548,49 @@
                         </p>
                     </div>
                     <figure>
-                        <img src="img/chair_thum1_img1.gif" alt="img/chair_thum1_img1.gif">
+                        <img src="img/chair_thum2_img1.gif" alt="img/chair_thum2_img1.gif">
                         <figcaption>1930년대 진해 해원양성소. 오늘날 한국해양대의 전신이다.</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/chair_thum1_img2.gif" alt="img/chair_thum1_img2.gif">
+                        <img src="img/chair_thum2_img2.gif" alt="img/chair_thum2_img2.gif">
                         <figcaption>
                             1930년대 상하이는 세계 문물과 인종의 전시장이었다.
                             이곳에서 조중훈은 유대인 상인의 사업철학을 배웠다.
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/chair_thum1_img3.gif" alt="img/chair_thum1_img3.gif">
+                        <img src="img/chair_thum2_img3.gif" alt="img/chair_thum2_img3.gif">
                         <figcaption>1945년 인천 항동 한진상사 창고</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/chair_thum1_img4.gif" alt="img/chair_thum1_img4.gif">
+                        <img src="img/chair_thum2_img4.gif" alt="img/chair_thum2_img4.gif">
                         <figcaption>한진상사의 초기 사업이 순항한 것은 어려움 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/chair_thum1_img5.gif" alt="img/chair_thum1_img5.gif">
+                        <img src="img/chair_thum2_img5.gif" alt="img/chair_thum2_img5.gif">
                         <figcaption>한진상사의 초기 사업이 순항한 것은 어려움 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/chair_thum1_img6.gif" alt="img/chair_thum1_img6.gif">
+                        <img src="img/chair_thum2_img6.gif" alt="img/chair_thum2_img6.gif">
                         <figcaption>한진상사의 초기 사업이 순항한 것은 어려움 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/chair_thum1_img7.gif" alt="img/chair_thum1_img7.gif">
+                        <img src="img/chair_thum2_img7.gif" alt="img/chair_thum2_img7.gif">
                         <figcaption>미군 수송 용역은 한진상사를 한 단계 업그레이드하는 계기였다.</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/chair_thum1_img8.gif" alt="img/chair_thum1_img8.gif">
+                        <img src="img/chair_thum2_img8.gif" alt="img/chair_thum2_img8.gif">
                         <figcaption>미군 장성들은 조중훈의 신용과 열정에 감탄했다.</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/chair_thum1_img9.gif" alt="img/chair_thum1_img9.gif">
+                        <img src="img/chair_thum2_img9.gif" alt="img/chair_thum2_img9.gif">
                         <figcaption>1959년 한진상사 문산영업소</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/chair_thum1_img10.gif" alt="img/chair_thum1_img10.gif">
+                        <img src="img/chair_thum2_img10.gif" alt="img/chair_thum2_img10.gif">
                         <figcaption>1966년 주한미8군사령부</figcaption>
                     </figure>
-                </div>  
+                </div>   
 
 
             </div>
