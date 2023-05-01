@@ -209,7 +209,9 @@
             // 썸네일 클릭시 이미지 팝업 열기
             $(".timelinegallery > figure img").click(function(){
 
-                $(".timelinegallery").append("<div class='gallery-popup'></div>")
+                $(".gallery-popup").remove();
+
+                $(this).parents(".timelinegallery").append("<div class='gallery-popup'></div>")
                 const popup = $(".gallery-popup");
                 
                 $(this).parent().clone().appendTo(popup);
