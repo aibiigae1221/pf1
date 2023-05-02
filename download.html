@@ -22,10 +22,88 @@
     <script type="text/javascript" src="js/submenu.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-           
+            let current = -1;
 
+            function changeImage(nth){
+                
+                const newImg = $("ul.download-list li:nth-of-type("+ nth + ") figure img");
+                console.log(nth);
+                if(newImg.length === 0){
+                    // 다음 타깃 li가 없다면
+                    return;
+                    
+                }
+
+                const newSrc = newImg.attr("src");
+                $(".download-list-popup img").attr("src", newSrc);
+                $(".download-list-popup img").attr("alt", newSrc);
+                current = nth;   
+            }
+           
             
 
+
+
+
+            $("ul.download-list li figure").click(function(){
+
+                // 기존에 있는 팝업 제거
+                $(".download-list-popup-overlay").remove();
+
+                // 팝업 패널 추가
+                $("ul.download-list").append("<div class='download-list-popup'></div>");
+
+                // 이미지 복사해서 팝업 패널에 추가
+                $(this).find("img").clone().appendTo(".download-list-popup");
+
+                // 닫기 버튼을 팝업 패널에 추가
+                $(".download-list-popup").append("<button class='close'>X</button>");
+
+                
+                // 닫기 버튼 클릭 시 닫기 기능 추가
+                $(".download-list-popup .close").click(function(e){
+                    e.stopPropagation();
+                    $(".download-list-popup").fadeOut(200, function(){
+                        $(".download-list-popup-overlay").remove();
+                    });
+                });
+
+
+                // prev & next 버튼
+                current = $(this).parent().index() + 1;
+                
+                $(".download-list-popup").append("<button class='prev slide-button'>&lt;</button>");
+                $(".download-list-popup .prev").click(function(e){
+                    e.stopPropagation();
+                    changeImage(current-1);
+                });
+
+                $(".download-list-popup").append("<button class='next slide-button'>&gt;</button>");
+                $(".download-list-popup .next").click(function(e){
+                    e.stopPropagation();
+                    changeImage(current+1);
+                });
+
+                // 팝업 패널을 감싸는 오버레이 추가
+                $(".download-list-popup").wrap("<div class='download-list-popup-overlay'></div>");               
+
+                // 오버레이 클릭 시 닫기 기능 추가
+                $(".download-list-popup-overlay").click(function(){
+                    $(".download-list-popup").fadeOut(200, function(){
+                        $(".download-list-popup-overlay").remove();
+                    });
+                });
+
+                // 이미지 클릭시 닫히지 않게 하기
+                $(".download-list-popup").click(function(e){
+                    e.stopPropagation();
+                });
+
+                // 화면에 fade in
+                $(".download-list-popup-overlay").hide().fadeIn();
+            });
+
+            
         });// document ready
 
 
