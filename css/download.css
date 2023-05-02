@@ -19,6 +19,8 @@
 #download-container section .wrap ul.download-list li {
   border-top: 3px solid #1297bb;
   text-align: center;
+  position: relative;
+  cursor: pointer;
 }
 #download-container section .wrap ul.download-list li h3 {
   
@@ -28,6 +30,17 @@
   border-right: 1px solid #ccc;
   line-height: 1.2;
 }
+
+#download-container section .wrap ul.download-list li h3::before{
+  content:"";
+  position: absolute;
+  border-right: 1px solid #ddd;
+  width: 1px;
+  height: 70px;
+  top: 0;
+  left: 12px;
+}
+
 #download-container section .wrap ul.download-list li figure {
   
   height: 180px;
@@ -55,3 +68,53 @@
   display: inline-block;
   transform: translateY(10px);
 }
+
+/* 이미지 팝업 */
+#download-container section .wrap ul.download-list .download-list-popup-overlay{
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+#download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup{
+  
+  position: relative;
+  width: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup img{
+  width: 600px;
+}
+#download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.close{
+  
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  cursor: pointer;
+}
+#download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.slide-button{
+  background-color: rgba(0,0,0, 0.3);
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+#download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.prev{
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+#download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.next{
+  
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+/* 이미지 팝업 */
