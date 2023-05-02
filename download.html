@@ -27,24 +27,20 @@
             function changeImage(nth){
                 
                 const newImg = $("ul.download-list li:nth-of-type("+ nth + ") figure img");
-                console.log(nth);
+                // console.log(nth);
                 if(newImg.length === 0){
                     // 다음 타깃 li가 없다면
                     return;
                     
                 }
-
+                
+                // 이미지의 src를 가져와서 팝업 이미지에 붙여넣기
                 const newSrc = newImg.attr("src");
                 $(".download-list-popup img").attr("src", newSrc);
                 $(".download-list-popup img").attr("alt", newSrc);
                 current = nth;   
             }
            
-            
-
-
-
-
             $("ul.download-list li figure").click(function(){
 
                 // 기존에 있는 팝업 제거
@@ -72,13 +68,13 @@
                 // prev & next 버튼
                 current = $(this).parent().index() + 1;
                 
-                $(".download-list-popup").append("<button class='prev slide-button'>&lt;</button>");
+                $(".download-list-popup").append("<button class='prev slide-button'>〈</button>");
                 $(".download-list-popup .prev").click(function(e){
                     e.stopPropagation();
                     changeImage(current-1);
                 });
 
-                $(".download-list-popup").append("<button class='next slide-button'>&gt;</button>");
+                $(".download-list-popup").append("<button class='next slide-button'>〉</button>");
                 $(".download-list-popup .next").click(function(e){
                     e.stopPropagation();
                     changeImage(current+1);
