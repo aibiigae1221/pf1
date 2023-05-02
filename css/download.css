@@ -88,23 +88,28 @@
   transform: translateX(-50%) translateY(-50%);
 }
 #download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup img{
-  width: 600px;
+  width: 700px;
 }
 #download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.close{
   
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 20px;
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: -26px;
+  right: -32px;
   cursor: pointer;
+  font-size: 35px;
 }
 #download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.slide-button{
-  background-color: rgba(0,0,0, 0.3);
   padding: 10px;
   color: #fff;
-  font-size: 20px;
+  font-size: 55px;
   cursor: pointer;
+  font-weight: bold;
+  border: none;
+  line-height: 1.2;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
 }
 #download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.prev{
   position: absolute;
