@@ -206,24 +206,49 @@
                 
             });
 
-            // 썸네일 클릭시 이미지 팝업 열기
+            
+
+            let i;
+
+            // 이미지 클릭시 팝업이미지 처리
             $(".timelinegallery > figure img").click(function(){
 
-                $(".gallery-popup").remove();
+                $(".overlay").remove();
 
+                // 팝업 패널 추가
                 $(this).parents(".timelinegallery").append("<div class='gallery-popup'></div>")
                 const popup = $(".gallery-popup");
                 
+                // 닫기 버튼 추가
                 $(this).parent().clone().appendTo(popup);
                 popup.append("<button class='close'>x</button>");
                 
+                i=$(this).parent().index();
+                console.log(i);
+                popup.find("img").attr("src","img/chair_gall1_img" + i + ".jpg");
+                popup.find("img").attr("alt","img/chair_gall1_img" + i + ".jpg");
+                
+
+                $(popup).wrap("<div class='overlay'></div>");
+
+                // 화면에 팝업 보여주기
                 popup.hide().fadeIn(500);
                 
+                // 닫기 시도 시
                 popup.find(".close").click(function(){
-                    popup.fadeOut(500, function(){
-                        $(this).remove();
+                    popup.fadeOut(200, function(){
+                        $(".overlay").remove();
                     });
                 });
+
+                // 외부 배경 선택 시 닫기
+                $(".overlay").click(function(){
+                    popup.fadeOut(200, function(){
+                        $(".overlay").remove();
+                    });
+                });
+
+               
             });
 
             
