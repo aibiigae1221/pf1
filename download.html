@@ -18,6 +18,7 @@
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link rel="stylesheet" href="css/response.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="text/javascript" src="js/submenu.js"></script>
     <script type="text/javascript">
@@ -53,13 +54,14 @@
                 $(this).find("img").clone().appendTo(".download-list-popup");
 
                 // 닫기 버튼을 팝업 패널에 추가
-                $(".download-list-popup").append("<button class='close'>X</button>");
+                $(".download-list-popup").append("<button class='close'><span class='material-symbols-outlined'>" +
+                                                    "close</span></button>");
 
                 
                 // 닫기 버튼 클릭 시 닫기 기능 추가
                 $(".download-list-popup .close").click(function(e){
                     e.stopPropagation();
-                    $(".download-list-popup").fadeOut(200, function(){
+                    $(".download-list-popup").fadeOut(500, function(){
                         $(".download-list-popup-overlay").remove();
                     });
                 });
@@ -85,7 +87,7 @@
 
                 // 오버레이 클릭 시 닫기 기능 추가
                 $(".download-list-popup-overlay").click(function(){
-                    $(".download-list-popup").fadeOut(200, function(){
+                    $(".download-list-popup").fadeOut(500, function(){
                         $(".download-list-popup-overlay").remove();
                     });
                 });
@@ -97,12 +99,33 @@
 
                 // 화면에 fade in
                 $(".download-list-popup-overlay").hide().fadeIn();
+                /*
+                $(".download-list-popup-overlay").hide().fadeIn(200, function(){
+                    console.log($(".download-list-popup img").position());
+                    let imgx = $(".download-list-popup img").position().left;
+                    let imgy = $(".download-list-popup img").position().top;
+                    
+
+                    imgx = imgx + $(".download-list-popup img").width() - $(".download-list-popup .close").width() / 2;
+                    imgy = imgy - $(".download-list-popup .close").height() / 2;
+                    $(".download-list-popup .close").css({"left":imgx, "top":imgy});    
+                });
+                */
             });
 
+            $("#download-container section .wrap ul.download-list li button").click(function(){
+                const href = $(this).attr("data-href");
+                window.open(href, "_blank");
+                //window.open('download/사업은+예술이다_'+n+'장.pdf', '_blank');
+            });
             
         });// document ready
 
-
+        /*
+        function downloadPdf(n) {
+            window.open('download/사업은+예술이다_'+n+'장.pdf', '_blank');
+        } 
+        */
 
 
     </script>
@@ -305,7 +328,9 @@
                             표지 및 목차
                         </h3>
                         <figure><img src="img/life_img1.jpg" alt="img/life_img1.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_0장.pdf">다운로드 <i class="download-icon"></i></button>
+                        <!-- <button onclick="downloadPdf(0)">다운로드</button> -->
+                        
                     </li>
                     <li>
                         <h3 class="h5">
@@ -314,21 +339,21 @@
                             오디세이
                         </h3>
                         <figure><img src="img/life_img2.jpg" alt="img/life_img2.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_1장.pdf">다운로드 <i class="download-icon"></i></button>
                     </li>
                     <li>
                         <h3 class="h5">
                             2장 퀴논의 전설
                         </h3>
                         <figure><img src="img/life_img3.jpg" alt="img/life_img3.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_2장.pdf">다운로드 <i class="download-icon"></i></button>
                     </li>
                     <li>
                         <h3 class="h5">
                             3장 대한항공 인수
                         </h3>
                         <figure><img src="img/life_img4.jpg" alt="img/life_img4.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_3장.pdf">다운로드 <i class="download-icon"></i></button>
                     </li>
                     <li>
                         <h3 class="h5">
@@ -337,7 +362,7 @@
                             세계의 날개로
                         </h3>
                         <figure><img src="img/life_img5.jpg" alt="img/life_img5.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_4장.pdf">다운로드 <i class="download-icon"></i></button>
                     </li>
                     <li>
                         <h3 class="h5">
@@ -346,7 +371,7 @@
                             꿈을 이루다
                         </h3>
                         <figure><img src="img/life_img6.jpg" alt="img/life_img6.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_5장.pdf">다운로드 <i class="download-icon"></i></button>
                     </li>
                     <li>
                         <h3 class="h5">
@@ -355,7 +380,7 @@
                             위한 변주곡
                         </h3>
                         <figure><img src="img/life_img7.jpg" alt="img/life_img7.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_6장.pdf">다운로드 <i class="download-icon"></i></button>
                     </li>
                     <li>
                         <h3 class="h5">
@@ -364,7 +389,7 @@
                             외교가
                         </h3>
                         <figure><img src="img/life_img8.jpg" alt="img/life_img8.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_7장.pdf">다운로드 <i class="download-icon"></i></button>
                     </li>
                     <li>
                         <h3 class="h5">
@@ -373,7 +398,7 @@
                             가꾼 정원사
                         </h3>
                         <figure><img src="img/life_img9.jpg" alt="img/life_img9.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_8장.pdf">다운로드 <i class="download-icon"></i></button>
                     </li>
                     <li>
                         <h3 class="h5">
@@ -382,7 +407,7 @@
                             사업의 예술가
                         </h3>
                         <figure><img src="img/life_img10.jpg" alt="img/life_img10.jpg" /></figure>
-                        <button class="download">다운로드 <i class="download-icon"></i></button>
+                        <button class="download" data-href="download/사업은+예술이다_9장.pdf">다운로드 <i class="download-icon"></i></button>
                     </li>
                 </ul>
 

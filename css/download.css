@@ -82,13 +82,12 @@
 #download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup{
   
   position: relative;
-  width: fit-content;
+  width: 20%;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 #download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup img{
-  width: 700px;
 }
 #download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.close{
   
@@ -99,6 +98,7 @@
   right: -32px;
   cursor: pointer;
   font-size: 35px;
+  border: 0 none;
 }
 #download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.slide-button{
   padding: 10px;
@@ -115,11 +115,13 @@
   position: absolute;
   left: 0;
   top: 50%;
+  transform: translateY(-50%);
 }
 #download-container section .wrap ul.download-list .download-list-popup-overlay .download-list-popup button.next{
   
   position: absolute;
   top: 50%;
   right: 0;
+  transform: translateY(-50%);
 }
 /* 이미지 팝업 */
