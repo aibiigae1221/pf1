@@ -44,9 +44,9 @@
             });
             $("#title .wlist .slick-dots").append("<button class='pause-or-play-btn' type='button'><span class='material-symbols-outlined'>play_pause</span></button>");
 
-            let isPlayingManBanner = true;
+            let isPlayingMainBanner = true;
             $("#title .wlist .slick-dots .pause-or-play-btn").click(function(){
-                if(isPlayingManBanner){
+                if(isPlayingMainBanner){
                     
                     $(".wlist").slick("slickPause");
                 }else{
@@ -54,7 +54,7 @@
                     $(".wlist").slick("slickPlay");
                 } 
 
-                isPlayingManBanner = !isPlayingManBanner;
+                isPlayingMainBanner = !isPlayingMainBanner;
             });
             /* 메인 배너 */
 
