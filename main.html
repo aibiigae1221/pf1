@@ -12,13 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/title.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/response.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="text/javascript" src="js/submenu.js"></script>
 
@@ -28,13 +29,67 @@
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script type="text/javascript">
         $(function(){
+
+            /* 메인 배너 */
             $('.wlist').slick({
                 dots:true,
                 autoplay:true,
                 autoplaySpeed:2000,
                 speed:1000,
-                infinite:true
+                infinite:true,
+                vertical:true,
+                pauseOnHover:false
+                
+               
             });
+            $("#title .wlist .slick-dots").append("<button class='pause-or-play-btn' type='button'><span class='material-symbols-outlined'>play_pause</span></button>");
+
+            let isPlayingManBanner = true;
+            $("#title .wlist .slick-dots .pause-or-play-btn").click(function(){
+                if(isPlayingManBanner){
+                    
+                    $(".wlist").slick("slickPause");
+                }else{
+                    
+                    $(".wlist").slick("slickPlay");
+                } 
+
+                isPlayingManBanner = !isPlayingManBanner;
+            });
+            /* 메인 배너 */
+
+
+            /* 사회공헌 */
+            $(".society-article-list").slick({
+                dots:true,
+                autoplay:true,
+                autoplaySpeed:2000,
+                speed:1000,
+                infinite:true,
+                vertical:false,
+                pauseOnHover:false
+            });
+
+            $(".society-article-list > button").wrapAll('<span class="control"></span>');
+
+
+            let isSocietyGalleryPause = false;
+            $("#society .wrap > .pause-or-play").click(function(){
+                if(isSocietyGalleryPause){
+                    $(this).html("정지");
+                    $(".society-article-list").slick("slickPlay");    
+                }else{
+                    $(this).html("재생");
+                    $(".society-article-list").slick("slickPause");
+                }
+
+                isSocietyGalleryPause = !isSocietyGalleryPause;
+            });
+
+            const pauseOrPlayBtn = $(".pause-or-play")
+            pauseOrPlayBtn.appendTo($(".society-article-list .control"));
+            /* 사회공헌 */
+
         });
     </script>
 </head>
@@ -276,21 +331,60 @@
                     <span class="block"></span>
                     꿈꿉니다
                 </p>
-                <article>
-                    <a href="" class="block">
-
-                        <figure>
-                            <img src="img/s1.jpg" alt="487 * 150 size image" />
-                            <figcaption class="hide">
-                                경찰청관계자가 물품전달하는 장면
-                            </figcaption>
-                        </figure>
-                        
- 
-                        <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
-                        <date class="p ccc">2021-05-25</date>
-                    </a>
-                </article>
+                <div class="society-article-list">
+                    <article>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/society-article1.png" alt="487 * 150 size image" />
+                                <figcaption class="hide">
+                                    경찰청관계자가 물품전달하는 장면
+                                </figcaption>
+                            </figure>
+                            
+     
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="" class="block">
+    
+                            <figure>
+                                <img src="img/society-article2.png" alt="487 * 150 size image" />
+                                <figcaption class="hide">
+                                    경찰청관계자가 물품전달하는 장면
+                                </figcaption>
+                            </figure>
+                            
+     
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="" class="block">
+    
+                            <figure>
+                                <img src="img/society-article3.png" alt="487 * 150 size image" />
+                                <figcaption class="hide">
+                                    경찰청관계자가 물품전달하는 장면
+                                </figcaption>
+                            </figure>
+                            
+     
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                </div>
+                
+                <button type="button" class="pause-or-play">
+                    정지
+                </button>
+                    
+                
+                
+                
             </div>
             
         </section>

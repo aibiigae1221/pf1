@@ -26,19 +26,31 @@ div#title{
     display: none;
   }
   div#title .wlist{
-
-  height: 85%;
-  z-index: 3;
+    height: 64%;
+    z-index: 0;
   }
   div#title .wlist .slick-prev{
     left: 25px;
     z-index: 1;
   }
   div#title .wlist .slick-next{
-
     right: 25px;
     z-index: 1;
-      
+  }
+
+  #title .wlist .slick-dots{
+    z-index: 1;
+  }
+
+  #title .wlist .slick-dots li{
+     
+  }
+
+  #title .wlist .slick-dots .pause-or-play-btn{
+    border: 0;
+    background-color: transparent;
+    transform: translateY(13px);
+    cursor: pointer;
   }
 
   div .wlist .list{
@@ -117,6 +129,8 @@ div#title{
     /*! animation-iteration-count: infinite; */
     /*! animation-direction: alternate; */
     margin: 0 auto;
+    top: 100px;
+    z-index: 0;
   }
   div#title a:hover{
     background-color: orange;

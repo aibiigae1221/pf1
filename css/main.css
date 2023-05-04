@@ -192,7 +192,7 @@ main section#intro div ul li a:hover::after{
 #society .wrap {
   display: flex;
   justify-content: space-between;
-  background-color: #eee;
+  background-color: #e6efee;
   padding: 20px;
   box-sizing: border-box;
   position: relative;
@@ -209,6 +209,42 @@ main section#intro div ul li a:hover::after{
   top: 61px;
   line-height: 1.4;
 }
+
+
+
+#society .wrap .society-article-list .control .pause-or-play{
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+
+#society .wrap .society-article-list{
+  width: 50%;
+}
+
+#society .wrap .society-article-list .control{
+  position: absolute;
+  right: 15px;
+  bottom: -25px;
+  display: flex;
+  z-index: 1;
+}
+#society .wrap .society-article-list .control > button{
+}
+
+#society .wrap .society-article-list .control button.slick-arrow{
+}
+
+#society .wrap .society-article-list .control .slick-prev{
+  
+}
+
+#society .wrap .society-article-list .control .slick-next{
+}
+
+
 #society .wrap article {
   
 }
@@ -222,7 +258,7 @@ main section#intro div ul li a:hover::after{
 
 #society .wrap article a:hover{
   border:1px solid #ccc;
-  background-color:#ddd;
+  /*! background-color:#ddd; */
 }
 
 #society .wrap article a figure{
